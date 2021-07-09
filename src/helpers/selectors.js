@@ -10,6 +10,14 @@ const getAppointmentsForDay = (state, day) => {
   return result;
 };
 
+const getInterview = (state, interview) => {
+  if (interview === null) {
+    return null;
+  }
+
+  return { student: interview.student, interviewer: state.interviewers[interview.interviewer]}
+}
 
 
-export { getAppointmentsForDay };
+
+export { getAppointmentsForDay, getInterview };
