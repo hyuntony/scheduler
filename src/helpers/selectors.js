@@ -10,6 +10,18 @@ const getAppointmentsForDay = (state, day) => {
   return result;
 };
 
+const getInterviewersForDay = (state, day) => {
+  const result = [];
+  const appIds = state.days.filter(eachDay => eachDay.name === day);
+  if (appIds.length === 0) {
+    return [];
+  }
+  for (let id of appIds[0].interviewers) {
+    result.push(state.interviewers[id]);
+  }
+  return result;
+};
+
 const getInterview = (state, interview) => {
   if (interview === null) {
     return null;
@@ -20,4 +32,4 @@ const getInterview = (state, interview) => {
 
 
 
-export { getAppointmentsForDay, getInterview };
+export { getAppointmentsForDay, getInterviewersForDay, getInterview };
