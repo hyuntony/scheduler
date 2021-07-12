@@ -47,9 +47,6 @@ export default function Application(props) {
       .then(() => {
         setState(prev => ({...prev, appointments}));
       })
-      .catch(err => {
-        console.log(err);
-      })
   }
 
   const cancelInterview = function(id) {
@@ -66,10 +63,6 @@ export default function Application(props) {
       .then(() => {
         setState(prev => ({...prev, appointments}));
       })
-      .catch(err => {
-        console.log(err);
-      })
-
   }
 
   const schedule = dailyAppointments.map((appointment) => {
