@@ -9,6 +9,7 @@ Interview Scheduler is a one page react application that allows schedule managem
 **The App will be served at [http://localhost:8000/](http://localhost:8000/).**
 
 ***important***
+
 The app needs to be run alongside with [scheduler-api](https://github.com/hyuntony/scheduler-api) in order to receive data from axios requests.
 
 
@@ -39,8 +40,8 @@ npm run storybook
 
 ## Screenshots
 
-!["Main Application"](https://github.com/hyuntony/scheduler/blob/master/docs/Application.png?raw=true)
 Main Application
+!["Main Application"](https://github.com/hyuntony/scheduler/blob/master/docs/Application.png?raw=true)
 
-!["Array of mode states"](https://github.com/hyuntony/scheduler/blob/master/docs/Array%20of%20mode%20states.png?raw=true)
 Array of mode states for Appointment Components
+!["Array of mode states"](https://github.com/hyuntony/scheduler/blob/master/docs/Array%20of%20mode%20states.png?raw=true)
