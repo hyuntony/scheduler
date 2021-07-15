@@ -37,4 +37,10 @@ npm run storybook
 - NodeJS, Express
 - PostgreSQL
 
+## Screenshots
 
+!["Main Application"](https://github.com/hyuntony/scheduler/blob/master/docs/Application.png?raw=true)
+Main Application
+
+!["Array of mode states"](https://github.com/hyuntony/scheduler/blob/master/docs/Array%20of%20mode%20states.png?raw=true)
+Array of mode states for Appointment Components
