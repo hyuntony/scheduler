@@ -4,7 +4,7 @@ import classNames from "classnames";
 import "./InterviewerListItem.scss";
 
 export default function InterviewerListItem(props) {
-  const { name, avatar, setInterviewer} = props;
+  const { name, avatar, setInterviewer } = props;
 
   const liClass = classNames({
     'interviewers__item': true,
@@ -22,7 +22,7 @@ export default function InterviewerListItem(props) {
         src={avatar}
         alt={name}
       />
-      {props.selected ? name: null}
+      { props.selected ? name: null }
     </li>
-  )
-}
+  );
+};

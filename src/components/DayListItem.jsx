@@ -8,15 +8,15 @@ export default function DayListItem(props) {
     'day-list__item': true,
     'day-list__item--selected': props.selected,
     'day-list__item--full': props.spots === 0
- })
+ });
 
   let spotMessage = `${props.spots} spots remaining`;
   if (!props.spots) {
     spotMessage = "no spots remaining";
-  }
+  };
   if (props.spots === 1) {
     spotMessage = "1 spot remaining";
-  }
+  };
 
 
   return (
@@ -25,4 +25,4 @@ export default function DayListItem(props) {
       <h3 className="text--light">{spotMessage}</h3>
     </li>
   );
-}
+};

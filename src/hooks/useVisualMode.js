@@ -1,10 +1,12 @@
 import { useState } from 'react';
 
+// Keeps records of the modes in array form inside of history state
+// 2 built in methods to log new modes and go back to a previously set mode
 const useVisualMode = (initial) => {
   const [history, setHistory] = useState([initial]);
 
   const transition = (property, replace = false) => {
-    
+   
     setHistory((prev) => {
       const newHistory = [...prev];
 

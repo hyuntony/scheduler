@@ -105,5 +105,5 @@ export default function Appointment(props) {
         />
       )}
     </article>
-  )
-}
+  );
+};

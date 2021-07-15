@@ -17,7 +17,7 @@ const useApplicationData = () => {
       axios.get('/api/appointments'),
       axios.get('/api/interviewers')
     ]).then((all) => {
-      setState(prev => ({...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data}))
+      setState(prev => ({ ...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data }))
     });
   }, []);
 
@@ -28,7 +28,7 @@ const useApplicationData = () => {
     const listofNullAppointments = listOfAppointmentIds.filter(id => !state.appointments[id].interview);
     const spots = listofNullAppointments.length;
     
-    const day = {...state.days[currentDayIndex], spots};
+    const day = { ...state.days[currentDayIndex], spots };
     const days = [...state.days];
     days[currentDayIndex] = day;
     return days;
@@ -37,17 +37,17 @@ const useApplicationData = () => {
   const bookInterview = function(id, interview) {
     const appointment = {
       ...state.appointments[id],
-      interview: {...interview}
+      interview: { ...interview }
     };
     const appointments = {
       ...state.appointments,
       [id]: appointment
     };
 
-    return axios.put(`/api/appointments/${id}`, {interview})
+    return axios.put(`/api/appointments/${id}`, { interview })
       .then(() => {
-        setState(prev => ({...prev, appointments}))
-        setState(prev => ({...prev, days: updateEmptyDays(prev)}))
+        setState(prev => ({ ...prev, appointments }))
+        setState(prev => ({ ...prev, days: updateEmptyDays(prev) }))
       })
   };
 
@@ -63,12 +63,12 @@ const useApplicationData = () => {
 
     return axios.delete(`api/appointments/${id}`)
       .then(() => {
-        setState(prev => ({...prev, appointments}))
-        setState(prev => ({...prev, days: updateEmptyDays(prev)}))
+        setState(prev => ({ ...prev, appointments }))
+        setState(prev => ({ ...prev, days: updateEmptyDays(prev) }))
       })
   };
 
-  return {state, setDay, bookInterview, cancelInterview};
+  return { state, setDay, bookInterview, cancelInterview };
 };
 
 export default useApplicationData;
